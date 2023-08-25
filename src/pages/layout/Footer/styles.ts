@@ -1,5 +1,9 @@
 import styled from 'styled-components';
-import { Facebook, Twitter, Instagram } from '@styled-icons/boxicons-logos';
+import {
+  SlSocialFacebook as Facebook,
+  SlSocialTwitter as Twitter,
+  SlSocialInstagram as Instagram,
+} from 'react-icons/sl';
 
 export const Container = styled.div`
   display: flex;

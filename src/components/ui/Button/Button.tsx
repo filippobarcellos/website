@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight } from '@styled-icons/bootstrap/ArrowRight';
+import { AiOutlineArrowRight as ArrowRight } from 'react-icons/ai';
 // import { Segment } from 'utils/segment';
 
 import Loader from '@/components/ui/Loader';

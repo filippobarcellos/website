@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import * as AccordionRadix from '@radix-ui/react-accordion';
 
-import { ChevronDown } from '@styled-icons/boxicons-regular/ChevronDown';
+import { FiChevronDown } from 'react-icons/fi';
 
 import * as S from './styles';
 

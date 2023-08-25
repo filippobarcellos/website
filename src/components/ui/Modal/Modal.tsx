@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactModal from 'react-modal';
 import styled from 'styled-components';
-import { Close } from '@styled-icons/ionicons-outline/Close';
+import { AiOutlineClose as Close } from 'react-icons/ai';
 import GradientText from '../GradientText';
 // import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 

@@ -1,7 +1,9 @@
 import React, { useState, InputHTMLAttributes } from 'react';
 
-import { EyeOutline } from '@styled-icons/evaicons-outline/EyeOutline';
-import { EyeOffOutline } from '@styled-icons/evaicons-outline/EyeOffOutline';
+import {
+  AiOutlineEye as EyeOutline,
+  AiOutlineEyeInvisible as EyeOffOutline,
+} from 'react-icons/ai';
 
 import * as S from './styles';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check } from '@styled-icons/fa-solid/Check';
+import { AiOutlineCheck as Check } from 'react-icons/ai';
 
 import * as S from './styles';
 

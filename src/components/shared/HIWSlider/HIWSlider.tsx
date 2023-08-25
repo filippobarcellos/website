@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import ReactModal from 'react-modal';
-import { Navigation } from 'swiper';
+import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { AnimatePresence, motion } from 'framer-motion';
 // import { useBreakpoint } from 'gatsby-plugin-breakpoints';
-import { Close } from '@styled-icons/ionicons-outline/Close';
+import { MdOutlineClose as Close } from 'react-icons/md';
 
 import GradientText from '@/components/ui/GradientText/GradientText';
 
