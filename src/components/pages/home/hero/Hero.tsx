@@ -24,7 +24,7 @@ const Hero = () => {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
   // const breakpoints = useBreakpoint();
-  const isMobile = false;
+  const isMobile = true;
 
   function handleOpenModal() {
     setIsModalOpen(true);
@@ -106,15 +106,19 @@ const Hero = () => {
               <S.StoreButtons>
                 <a href={process.env.APP_DOWNLOAD_LINK} target="_blank">
                   <Image
-                    src="/apple_play_button.svg"
+                    src="/images/apple_play_button.svg"
                     alt="circl play store"
+                    width={100}
+                    height={40}
                     // onClick={() => Segment.track('DownloadHero', null)}
                   />
                 </a>
                 <a href={process.env.APP_DOWNLOAD_LINK} target="_blank">
                   <Image
-                    src="/google-play-badge.png"
+                    src="/images/google-play-badge.png"
                     alt="circl google store"
+                    width={100}
+                    height={40}
                     // onClick={() => Segment.track('DownloadHero', null)}
                   />
                 </a>

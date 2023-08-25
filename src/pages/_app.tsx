@@ -7,6 +7,8 @@ import {
 } from '@tanstack/react-query';
 import { ThemeProvider } from 'styled-components';
 
+import { IsSsrMobileContext } from '@/context/useIsMobile';
+
 import theme from '@/styles/theme';
 import GlobalStyle from '@/styles/GlobalStyle';
 
@@ -15,12 +17,14 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Hydrate state={pageProps.dehydratedState}>
-          <Component {...pageProps} />
-        </Hydrate>
-      </ThemeProvider>
+      <IsSsrMobileContext.Provider value={pageProps.isSsrMobile}>
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
+          <Hydrate state={pageProps.dehydratedState}>
+            <Component {...pageProps} />
+          </Hydrate>
+        </ThemeProvider>
+      </IsSsrMobileContext.Provider>
     </QueryClientProvider>
   );
 }

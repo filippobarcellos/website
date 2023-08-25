@@ -3,6 +3,9 @@ import { useCycle, motion } from 'framer-motion';
 // import { useLocation } from '@reach/router';
 // import { navigate } from 'gatsby';
 
+import { getIsSsrMobile } from '@/utils/mobile';
+import { useIsMobile } from '@/context/useIsMobile';
+
 import Button from '@/components/ui/Button';
 import Logo from '@/components/ui/Logo';
 import Menu from '@/components/Menu';
@@ -14,6 +17,7 @@ import * as S from './styles';
 import { Routes } from '@/constants/routes';
 // import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 import MenuButton from './MenuToggle';
+import { GetServerSidePropsContext } from 'next';
 
 const menuArr = [
   { title: 'Home', link: process.env.SITE_URL },
@@ -33,7 +37,7 @@ const Header = () => {
   // const location = useLocation();
   // const breakpoints = useBreakpoint();
 
-  const isMobile = true;
+  const isMobile = useIsMobile();
   const isHomePage = true;
   // const isHomePage = location.pathname === '/';
   const showPlayButton = isHomePage && scroll;
@@ -54,7 +58,7 @@ const Header = () => {
 
   function navigateToDownload() {
     // const url = getLinkToStore();
-    return window.location.replace(url);
+    return window.location.replace('url');
   }
 
   const BaseMenu = () => (
@@ -120,5 +124,13 @@ const Header = () => {
     </>
   );
 };
+
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  return {
+    props: {
+      isSsrMobile: getIsSsrMobile(context),
+    },
+  };
+}
 
 export default Header;
