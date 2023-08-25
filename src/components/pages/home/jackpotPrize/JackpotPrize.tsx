@@ -24,7 +24,7 @@ const JackpotPrize = () => {
           <S.TimeLineRow>
             <S.TimeLineBarMobile />
             {jackpotValues.map(({ games, value }, index) => (
-              <S.Jackpot key={index} index={index}>
+              <S.Jackpot key={index}>
                 <S.JackpotCircle>
                   <span>W</span>
                 </S.JackpotCircle>

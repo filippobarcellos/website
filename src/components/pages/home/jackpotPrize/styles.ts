@@ -115,7 +115,10 @@ export const JackpotText = styled.span`
   text-align: left;
 `;
 
-export const JackpotValue = styled.span`
+type ValueProps = {
+  maxJackpot: boolean;
+};
+export const JackpotValue = styled.span<ValueProps>`
   font-size: clamp(2rem, 8vw - 2rem, 2rem);
   font-weight: 700;
   color: ${({ theme, maxJackpot }) =>

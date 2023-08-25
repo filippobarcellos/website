@@ -119,7 +119,11 @@ export const SliderProgress = styled.div`
   }
 `;
 
-export const SliderProgressItem = styled.div`
+type Item = {
+  active: boolean;
+};
+
+export const SliderProgressItem = styled.div<Item>`
   width: 32px;
   height: 32px;
   border-radius: 50%;

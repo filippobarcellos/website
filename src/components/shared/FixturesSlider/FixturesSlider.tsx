@@ -3,7 +3,7 @@ import React from 'react';
 import TeamIndicator from '../TeamIndicator';
 import * as S from './styles';
 
-const FixturesSlider = ({ circls }) => {
+const FixturesSlider = ({ circls }: { circls: any }) => {
   return (
     <S.Container>
       <S.Slider>

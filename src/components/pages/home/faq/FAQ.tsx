@@ -270,7 +270,7 @@ const FAQ = () => {
             <Button
               variant="secondary"
               trackingTag="HowToPlay4"
-              click={() => scrollTo('#how_to_play')}
+              // click={() => scrollTo('#how_to_play')}
             >
               How to play
             </Button>

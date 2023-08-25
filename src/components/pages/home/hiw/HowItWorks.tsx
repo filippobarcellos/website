@@ -62,7 +62,7 @@ const HowItWorks = () => {
     setIsVideoModalOpen(false);
   }
 
-  const SliderProgress = ({ style }) => (
+  const SliderProgress = ({ style }: { style?: any }) => (
     <S.SliderProgress style={style}>
       {slides.map((slide, index) => (
         <S.SliderProgressItem key={slide} active={activeIndex >= index}>

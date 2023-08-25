@@ -50,12 +50,18 @@ const itemVariants = {
   open: { opacity: 1 },
 };
 
-const Menu = ({ open, cycleOpen }) => {
+const Menu = ({
+  open,
+  cycleOpen,
+}: {
+  open: boolean;
+  cycleOpen: () => void;
+}) => {
   // const location = useLocation();
 
   function navigateToDownload() {
     // const url = getLinkToStore();
-    return window.location.replace(url);
+    return window.location.replace('url');
   }
 
   function onClick(name: string) {
