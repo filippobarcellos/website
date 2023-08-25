@@ -1,9 +1,6 @@
 import Head from 'next/head';
 // import Image from 'next/image'
 import { Inter } from 'next/font/google';
-import styles from '@/styles/Home.module.css';
-
-const inter = Inter({ subsets: ['latin'] });
 
 import FAQ from '@/components/pages/home/faq';
 import Hero from '@/components/pages/home/hero';
@@ -13,7 +10,7 @@ import HowItWorks from '@/components/pages/home/hiw';
 import Winners from '@/components/pages/home/winners';
 import Partners from '@/components/pages/home/partners';
 import JackpotPrize from '@/components/pages/home/jackpotPrize';
-import RootLayout from '@/pages/layout/RootLayout';
+import RootLayout from '@/components/layout/RootLayout';
 
 export default function Home() {
   return (
